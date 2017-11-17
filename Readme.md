@@ -62,6 +62,10 @@ Shut down your containers with
 $ docker-compose down
 ```
 
+## Different Setup ??
+
+This is just a starter template. If you want to learn more about Docker templates you should visit https://docs.docker.com/develop/ . We can also recommend this repository: https://github.com/webdevops/php-docker-boilerplate
+
 ## Authors
 
 * Simon Franzen (zauberware technologies)
