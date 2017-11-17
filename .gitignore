@@ -58,7 +58,11 @@ Thumbs.db
 /wp-content/*
 !/wp-content/mu-plugins/
 !/wp-content/plugins/
-!/wp-content/themes/
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
+/wp-content/themes
+!/wp-content/themes/jobify
+!/wp-content/themes/jobify-classic
 
 # ignore node/grunt dependency directories
 node_modules/
