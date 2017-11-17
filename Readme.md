@@ -1,4 +1,12 @@
-# STEMP - Wordpress
+# Wordpress & MySQL & PHPMyAdmin running on docker
+
+This is a tiny ready to go boilerplate for a website running with wordpress. It uses the following libraries:
+
+* MySQL https://github.com/docker-library/mysql
+* Wordpress https://github.com/docker-library/wordpress
+* PHPMyAdmin https://github.com/phpmyadmin/docker
+
+Access your page under http://0.0.0.0:8000 after installation.
 
 ## INSTALL
 
@@ -8,9 +16,9 @@ Install and start Docker https://docs.docker.com/engine/installation/
 
 ```
 
-$ git clone git@bitbucket.org:zauberware/docker-wordpress-mysql-phpmyadmin.git
+$ git clone git@github.com:zauberware/docker-wordpress-mysql-phpmyadmin.git
 
-$ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker cd wordpress-on-docker
+$ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker && cd wordpress-on-docker
 
 $ source install.sh
 ```
@@ -39,7 +47,7 @@ Like you see there is only the wp-content folder of wordpress and few Docker fil
 ### 3. Install Docker & project setup
 
 1. Start docker in the application
-2. run 'docker-compose up'
+2. run `docker-compose up`
 3. wait for installation and check your running containers with `docker ps`. You should see wordpress, mysql and phpadmin as a container.
 
 Page available: http://0.0.0.0:8000/
@@ -48,27 +56,6 @@ PHPMyAdmin available: http://0.0.0.0:8080/
 Shut down your containers with
 ```
 $ docker-compose down
-```
-
-## Helpful commands
-
-As a developer we like to destroy our environment. Here are some helpful docker commands:
-
-Running in detached mode
-```
-$ docker-compose up -d
-```
-
-All your images
-```
-$ docker images
-```
-
-Remove a image
-
-
-```
-$ docker rmi {id}
 ```
 
 ## Authors
