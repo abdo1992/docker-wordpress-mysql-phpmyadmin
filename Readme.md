@@ -1,4 +1,12 @@
-# STEMP - Wordpress
+# Wordpress & MySQL & PHPMyAdmin running on docker
+
+This is a tiny ready to go boilerplate for a website running with wordpress. It uses the following libraries:
+
+* MySQL https://github.com/docker-library/mysql
+* Wordpress https://github.com/docker-library/wordpress
+* PHPMyAdmin https://github.com/phpmyadmin/docker
+
+Access your page under http://0.0.0.0:8000 after installation.
 
 ## INSTALL
 
@@ -48,27 +56,6 @@ PHPMyAdmin available: http://0.0.0.0:8080/
 Shut down your containers with
 ```
 $ docker-compose down
-```
-
-## Helpful commands
-
-As a developer we like to destroy our environment. Here are some helpful docker commands:
-
-Running in detached mode
-```
-$ docker-compose up -d
-```
-
-All your images
-```
-$ docker images
-```
-
-Remove a image
-
-
-```
-$ docker rmi {id}
 ```
 
 ## Authors
