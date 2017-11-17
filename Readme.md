@@ -47,7 +47,7 @@ Like you see there is only the wp-content folder of wordpress and few Docker fil
 ### 3. Install Docker & project setup
 
 1. Start docker in the application
-2. run 'docker-compose up'
+2. run `docker-compose up`
 3. wait for installation and check your running containers with `docker ps`. You should see wordpress, mysql and phpadmin as a container.
 
 Page available: http://0.0.0.0:8000/
