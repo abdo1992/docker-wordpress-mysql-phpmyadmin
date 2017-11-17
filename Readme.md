@@ -8,7 +8,7 @@ Install and start Docker https://docs.docker.com/engine/installation/
 
 ```
 
-$ git clone git@bitbucket.org:zauberware/docker-wordpress-mysql-phpmyadmin.git
+$ git clone git@github.com:zauberware/docker-wordpress-mysql-phpmyadmin.git
 
 $ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker cd wordpress-on-docker
 
