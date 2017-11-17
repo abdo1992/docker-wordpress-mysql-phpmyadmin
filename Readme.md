@@ -40,15 +40,18 @@ Make sure that your current development workplace folder is available for mounti
 Clone the repository from Bitbucket and go into the project folder.
 
 ```
-$ git clone git@bitbucket.org:zauberware/stemp.git && cd stemp
+$ git clone git@github.com:zauberware/docker-wordpress-mysql-phpmyadmin.git
+
+$ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker && cd wordpress-on-docker
+
 ```
 
 Like you see there is only the wp-content folder of wordpress and few Docker files. So we use Docker to run our website for development and we are linking the wp-content folder to the wp-content folder on the Docker instance.
 
 ### 3. Install Docker & project setup
 
-1. Start docker in the application
-2. run `docker-compose up`
+1. Start docker in the docker desktop App
+2. run `source install.sh` or `docker-compose up`
 3. wait for installation and check your running containers with `docker ps`. You should see wordpress, mysql and phpadmin as a container.
 
 Page available: http://0.0.0.0:8000/
