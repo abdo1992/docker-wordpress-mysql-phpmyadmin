@@ -6,7 +6,7 @@
 
 Install and start Docker https://docs.docker.com/engine/installation/
 
-bash```
+```
 
 $ git clone git@bitbucket.org:zauberware/docker-wordpress-mysql-phpmyadmin.git
 
@@ -65,6 +65,8 @@ $ docker images
 ```
 
 Remove a image
+
+
 ```
 $ docker rmi {id}
 ```
