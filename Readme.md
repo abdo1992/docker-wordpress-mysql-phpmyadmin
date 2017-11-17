@@ -17,7 +17,6 @@ Access your page under http://0.0.0.0:8000 after installation.
 Install and start Docker https://docs.docker.com/engine/installation/
 
 ```
-
 $ git clone git@github.com:zauberware/docker-wordpress-mysql-phpmyadmin.git
 
 $ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker && cd wordpress-on-docker
@@ -64,3 +63,6 @@ $ docker-compose down
 
 * Simon Franzen (zauberware technologies)
 * Lisa Schmitz (zauberware technologies)
+
+
+![zauberware technologies](https://avatars3.githubusercontent.com/u/1753330?s=200&v=4)
