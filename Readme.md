@@ -1,6 +1,8 @@
 # Wordpress & MySQL & PHPMyAdmin running on docker
 
-This is a tiny ready to go boilerplate for a website running with wordpress. It uses the following libraries:
+This is a tiny ready to go boilerplate for a wordpress website running with Docker. 
+
+It uses the following libraries:
 
 * MySQL https://github.com/docker-library/mysql
 * Wordpress https://github.com/docker-library/wordpress
