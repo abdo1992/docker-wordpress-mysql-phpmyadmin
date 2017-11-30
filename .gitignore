@@ -1,5 +1,5 @@
 # If you want to include the database in your repo you should uncomment this line
-!.db_data
+_db_data
 
 # ignore all files starting with .
 .*

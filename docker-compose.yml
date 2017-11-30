@@ -1,41 +1,41 @@
 version: '2'
 services:
   db:
-    image: mysql:5.6 # change to your prefered version
+    image: mysql:5.7
     restart: always
     volumes:
-       - ./.db_data:/var/lib/mysql # stores data in repository -> for easy dev env setup
+       - ./_db_data:/var/lib/mysql
     restart: always
     ports:
       - "3306:3306"
-    environment: # use standard wordpress settings
-      MYSQL_ROOT_PASSWORD: somewordpress 
-      MYSQL_DATABASE: wordpress
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress_website
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
   wordpress:
     depends_on:
       - db
-    image: wordpress:latest # choose latest  or version
+    image: wordpress:4.9.0-php7.0
     ports:
-      - 8000:80 # access with http://0.0.0.0:8000
+      - 8000:80
     restart: always
     working_dir: /var/www/html
     volumes:
-      - ./wp-content:/var/www/html/wp-content # connect wp-content with wp-content on container
-    environment:
-      WORDPRESS_DB_HOST: db:3306 # settings for wp-config
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
+      - wordpress-rsync-sync:/var/www/html/wp-content:nocopy # will be mounted on /var/www/html/wp-content
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./wp-config.php:/var/www/html/wp-config.php
   phpmyadmin:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - 8080:80 # access with http://0.0.0.0:8080
+      - 8080:80
     environment:
       PMA_HOST: db
 volumes:
   db_data:
+  wordpress-rsync-sync:
+    external: true

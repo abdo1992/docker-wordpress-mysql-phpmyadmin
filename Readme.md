@@ -1,32 +1,15 @@
-# Wordpress & MySQL & PHPMyAdmin running on docker
+# Wordpress & MySQL & PHPMyAdmin running on docker with docker-rsync
 
 This is a tiny ready to go boilerplate for a website running with wordpress. It uses the following libraries:
 
 * MySQL https://github.com/docker-library/mysql
 * Wordpress https://github.com/docker-library/wordpress
 * PHPMyAdmin https://github.com/phpmyadmin/docker
+* docker-rsync https://github.com/synack/docker-rsync
 
 Access your page under http://0.0.0.0:8000 after installation.
 
 ## INSTALL
-
-### Fast way
-
-Install and start Docker https://docs.docker.com/engine/installation/
-
-```
-
-$ git clone git@github.com:zauberware/docker-wordpress-mysql-phpmyadmin.git
-
-$ mv docker-wordpress-mysql-phpmyadmin wordpress-on-docker && cd wordpress-on-docker
-
-$ source install.sh
-```
-or run 
-
-```
-$ docker-compose up
-```
 
 ### 1. Install Docker
 
@@ -44,7 +27,28 @@ $ git clone git@bitbucket.org:zauberware/stemp.git && cd stemp
 
 Like you see there is only the wp-content folder of wordpress and few Docker files. So we use Docker to run our website for development and we are linking the wp-content folder to the wp-content folder on the Docker instance.
 
-### 3. Install Docker & project setup
+## 3. Install Docker-rsync
+
+```
+$ gem install docker-sync
+```
+
+Run the syncer before starting docker containers
+
+```
+$ docker-sync start
+```
+
+To stop or clean the syncer
+
+```
+$ docker-sync stop
+$ docker-sync clean
+```
+
+### 4. Install Docker & project setup
+
+Open new terminal window.
 
 1. Start docker in the application
 2. run `docker-compose up`
